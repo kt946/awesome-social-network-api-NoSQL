@@ -1,0 +1,23 @@
+{
+  "name": "awesome-social-network-api-nosql",
+  "version": "1.0.0",
+  "description": "[![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kt946/awesome-social-network-api-NoSQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kt946/awesome-social-network-api-NoSQL/issues"
+  },
+  "homepage": "https://github.com/kt946/awesome-social-network-api-NoSQL#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.4"
+  }
+}
