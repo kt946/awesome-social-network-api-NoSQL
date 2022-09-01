@@ -2,7 +2,7 @@ const { Thought, User } = require('../models');
 
 const thoughtController = {
   // get all thoughts
-	getAllThoughts(req, res) {
+	getAllThought(req, res) {
 		Thought.find({})
 			.then(dbThoughtData => {res.json(dbThoughtData)})
 			.catch(err => res.status(400).json(err));
@@ -21,12 +21,12 @@ const thoughtController = {
 			.catch(err => res.status(400).json(err));
 	},
 
-  // create new thought to user
-  createThought({ params, body }, res) {
+  // create new thought
+  createThought({ body }, res) {
 		Thought.create(body)
       .then(({ _id }) => {
         return User.findOneAndUpdate(
-          { _id: params.userId },
+          { _id: body.userId },
 					{ $push: { thoughts: _id } },
 					{ new: true, runValidators: true }
         );
@@ -48,19 +48,19 @@ const thoughtController = {
       { $push: { reactions: body } },
       { new: true, runValidators: true }
     )
-      .then(dbPizzaData => {
-        if (!dbPizzaData) {
-          res.status(404).json({ message: 'No user found with this id!' });
+      .then(dbThoughtData => {
+        if (!dbThoughtData) {
+          res.status(404).json({ message: 'No thought found with this id!' });
           return;
         }
-        res.json(dbPizzaData);
+        res.json(dbThoughtData);
       })
       .catch(err => res.json(err));
   },
 
   // update thought by id
   updateThought({ params, body }, res) {
-		Thought.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
+		Thought.findOneAndUpdate({ _id: params.thoughtId }, body, { new: true, runValidators: true })
 			.then(dbThoughtData => {
 				if (!dbThoughtData) {
 					res.status(404).json({ message: 'No thought found with this id!' });
@@ -73,7 +73,7 @@ const thoughtController = {
 
   // delete thought by id
   removeThought({ params }, res) {
-		Thought.findOneAndDelete({ _id: params.id })
+		Thought.findOneAndDelete({ _id: params.thoughtId })
 			.then(dbThoughtData => {
 				if (!dbThoughtData) {
 					res.status(404).json({ message: 'No thought found with this id!' });
