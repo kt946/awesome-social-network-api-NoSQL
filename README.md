@@ -22,7 +22,7 @@ To install this application on your local machine:
 ```
     node -v
 ```
-- Ensure that MySQL is installed on your computer.
+- Ensure that MongoDB is installed on your computer.
 - Open a command-line interface (VS Code, Git Bash, etc.) and navigate to the directory containing the application's server.js.
 - In the command-line, download the application's dependencies by typing: 
 ```
@@ -39,7 +39,13 @@ npm start
 
 ## Screenshots
 
+The following images demonstrate the application's appearance and functionality.
+
 ## Technologies Used
+
+- Express
+- MongoDB
+- Mongoose
 
 ## Credits
 
@@ -47,7 +53,7 @@ npm start
 
 ## Links
 
-- [Link to GitHub repository]()
+- [Link to GitHub repository](https://github.com/kt946/awesome-social-network-api-NoSQL)
 
 ## License
 
