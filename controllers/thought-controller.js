@@ -41,6 +41,23 @@ const thoughtController = {
 			.catch(err => res.status(400).json(err));
 	},
 
+  // create new reaction to thought
+  createReaction({ params, body }, res) {
+    Thought.findOneAndUpdate(
+      { _id: params.thoughtId },
+      { $push: { reactions: body } },
+      { new: true, runValidators: true }
+    )
+      .then(dbPizzaData => {
+        if (!dbPizzaData) {
+          res.status(404).json({ message: 'No user found with this id!' });
+          return;
+        }
+        res.json(dbPizzaData);
+      })
+      .catch(err => res.json(err));
+  },
+
   // update thought by id
   updateThought({ params, body }, res) {
 		Thought.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
@@ -55,7 +72,7 @@ const thoughtController = {
 	},
 
   // delete thought by id
-  deleteThought({ params }, res) {
+  removeThought({ params }, res) {
 		Thought.findOneAndDelete({ _id: params.id })
 			.then(dbThoughtData => {
 				if (!dbThoughtData) {
@@ -65,7 +82,18 @@ const thoughtController = {
 				res.json(dbThoughtData);
 			})
 			.catch(err => res.status(400).json(err));
-	}
+	},
+
+  // delete reaction by id
+  removeReaction({ params }, res) {
+    Thought.findOneAndUpdate(
+			{ _id: params.thoughtId },
+			{ $pull: { reactions: { reactionId: params.reactionId } } },
+			{ new: true }
+		)
+			.then(dbThoughtData => res.json(dbThoughtData))
+			.catch(err => res.json(err));
+  }
 };
 
 module.exports = thoughtController;
