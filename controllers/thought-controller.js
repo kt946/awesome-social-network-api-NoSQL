@@ -4,13 +4,15 @@ const thoughtController = {
   // get all thoughts
 	getAllThought(req, res) {
 		Thought.find({})
+      .select('-__v')
 			.then(dbThoughtData => {res.json(dbThoughtData)})
 			.catch(err => res.status(400).json(err));
 	},
 
   // get single thought by id
   getThoughtById({ params }, res) {
-		Thought.findOne({ _id: params.id })
+		Thought.findOne({ _id: params.thoughtId })
+      .select('-__v')
 			.then(dbThoughtData => {
 				if (!dbThoughtData) {
           res.status(404).json({ message: 'No thought found with this id!' });
@@ -79,8 +81,14 @@ const thoughtController = {
 					res.status(404).json({ message: 'No thought found with this id!' });
 					return;
 				}
-				res.json(dbThoughtData);
+        // remove thought from user's thoughts array
+        return User.findOneAndUpdate(
+          { thoughts: params.thoughtId },
+          { $pull: { thoughts: params.thoughtId } },
+          { new: true }
+        )
 			})
+      .then(() => res.json({ message: 'Thought has been deleted!' }))
 			.catch(err => res.status(400).json(err));
 	},
 
