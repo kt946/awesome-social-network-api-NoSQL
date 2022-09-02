@@ -3,11 +3,13 @@
 
 ## Description
 
+For this project, I built an API for a social network application using my knowledge of NoSQL, JavaScript, Express, MongoDB, and Mongosse ODM. This back-end application uses a NoSQL database that allows developers to view, create, update, and delete users and thoughts. Developers are also able to add and remove friends to a user's friend list as well as create and remove reactions to thoughts.
 
 ## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Walkthrough](#walkthrough)
 * [Screenshots](#screenshots)
 * [Technologies Used](#technologies-used)
 * [Credits](#credits)
@@ -24,7 +26,7 @@ To install this application on your local machine:
 ```
 - Ensure that MongoDB is installed on your computer.
 - Open a command-line interface (VS Code, Git Bash, etc.) and navigate to the directory containing the application's server.js.
-- In the command-line, download the application's dependencies by typing: 
+- In the command-line, download the application's dependencies by typing the following command:
 ```
     npm install
 ```
@@ -35,7 +37,13 @@ To install this application on your local machine:
 ```
 npm start
 ```
-- While the server is running, open Insomnia to test out the different routes.
+- While the server is running, open Insomnia to test out the different routes and CRUD methods.
+
+## Walkthrough
+
+The following video demonstrate the application's appearance and functionality.
+
+[Link to walkthrough video]()
 
 ## Screenshots
 
@@ -43,9 +51,11 @@ The following images demonstrate the application's appearance and functionality.
 
 ## Technologies Used
 
+- JavaScript
 - Express
+- NoSQL
 - MongoDB
-- Mongoose
+- Mongoose ODM
 
 ## Credits
 
