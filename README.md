@@ -3,13 +3,13 @@
 
 ## Description
 
-For this project, I built an API for a social network application using my knowledge of NoSQL, JavaScript, Express, MongoDB, and Mongosse ODM. This back-end application uses a NoSQL database that allows developers to view, create, update, and delete users and thoughts. Developers are also able to add and remove friends to a user's friend list as well as create and remove reactions to thoughts.
+For this project, I built an API for a social network application using my knowledge of NoSQL, JavaScript, Express, MongoDB, and Mongosse ODM. This back-end application uses a NoSQL database that allows developers to view, create, update, and delete users and thoughts. Developers are also able to add and remove friends to a user's friend list as well as create and remove reactions to thoughts. This challenge expanded my knowledge on NoSQL databases and how full-stack applications can benefit from the flexibility of unstructured data.
 
 ## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Walkthrough](#walkthrough)
+* [Walkthrough Video](#walkthrough-video)
 * [Screenshots](#screenshots)
 * [Technologies Used](#technologies-used)
 * [Credits](#credits)
@@ -38,12 +38,16 @@ To install this application on your local machine:
 npm start
 ```
 - While the server is running, open Insomnia to test out the different routes and CRUD methods.
+- You can view all users, view a single user by id, create, update and delete a user from the database.
+- You can add and remove a user from another user's friend list.
+- You can view all thoughts, view a single thought by id, create, update and delete a thought from the database.
+- You can add and remove a reaction from a thought.
 
-## Walkthrough
+## Walkthrough Video
 
 The following video demonstrate the application's appearance and functionality.
 
-[Link to walkthrough video]()
+[Link to walkthrough video](https://watch.screencastify.com/v/sECPEzuHfOMcxTIjP0vT)
 
 ## Screenshots
 
