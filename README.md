@@ -53,6 +53,21 @@ The following video demonstrate the application's appearance and functionality.
 
 The following images demonstrate the application's appearance and functionality.
 
+- Image of GET route for a single user by id
+<img width="960" alt="get_route_demo" src="https://user-images.githubusercontent.com/103476893/188060775-60250d0c-b2fb-451a-9021-edbffe815bfc.png">
+
+- Image of POST route for adding a user to another user's friend list
+<img width="960" alt="post_route_friend_demo" src="https://user-images.githubusercontent.com/103476893/188060981-90ac4770-95b2-48e9-865b-6965702d20b9.png">
+
+- Image of GET route for all thoughts
+<img width="960" alt="get_route_thought_demo" src="https://user-images.githubusercontent.com/103476893/188061089-9d4dd2a4-db15-4652-8f93-da7b328e37fb.png">
+
+- Image of PUT route for updating a thought
+<img width="960" alt="put_route_thought_demo" src="https://user-images.githubusercontent.com/103476893/188061095-7e6fc51f-da9d-4762-aab6-f799f0431cc2.png">
+
+- Image of POST route for adding a reaction to a thought
+<img width="960" alt="post_route_reaction_demo" src="https://user-images.githubusercontent.com/103476893/188061097-3cfec550-dc7f-4ef4-9746-bedde2cac786.png">
+
 ## Technologies Used
 
 - JavaScript
