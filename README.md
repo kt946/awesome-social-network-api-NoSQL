@@ -47,7 +47,7 @@ npm start
 
 The following video demonstrate the application's appearance and functionality.
 
-[Link to walkthrough video](https://watch.screencastify.com/v/sECPEzuHfOMcxTIjP0vT)
+[Link to walkthrough video](https://watch.screencastify.com/v/7ky53lcoiPH9ErJjBaoj)
 
 ## Screenshots
 
